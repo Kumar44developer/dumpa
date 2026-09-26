@@ -1,1 +1,163 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 05: Inputs & Form Controls
+   File: global5.css
+   ========================================================================== */
 
+.form-group {
+  margin-bottom: var(--dumpa-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--dumpa-space-2);
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dumpa-text-muted);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.9375rem;
+  color: var(--dumpa-text);
+  background-color: var(--dumpa-surface);
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-md);
+  outline: none;
+  transition: border-color var(--dumpa-transition-fast), box-shadow var(--dumpa-transition-fast), background-color var(--dumpa-transition-fast);
+}
+
+.form-control::placeholder {
+  color: var(--dumpa-text-dim);
+}
+
+.form-control:hover {
+  border-color: var(--dumpa-border-light);
+}
+
+.form-control:focus {
+  border-color: var(--dumpa-primary);
+  background-color: var(--dumpa-surface-card);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.form-control:disabled {
+  background-color: rgba(255, 255, 255, 0.02);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Textarea */
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Custom Select */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.25rem;
+  cursor: pointer;
+}
+
+/* Input with Icon Container */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: var(--dumpa-text-dim);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon .form-control {
+  padding-left: 2.5rem;
+}
+
+/* Switch / Toggle */
+.form-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dumpa-space-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-switch input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-slider {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background-color: var(--dumpa-surface-elevated);
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-full);
+  transition: all var(--dumpa-transition-base);
+}
+
+.switch-slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform var(--dumpa-transition-base);
+}
+
+.form-switch input:checked + .switch-slider {
+  background: var(--dumpa-gradient-brand);
+  border-color: transparent;
+}
+
+.form-switch input:checked + .switch-slider::before {
+  transform: translateX(20px);
+}
+
+/* Custom Checkbox */
+.form-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dumpa-space-2);
+  cursor: pointer;
+}
+
+.form-check input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  accent-color: var(--dumpa-primary);
+  cursor: pointer;
+}
+
+/* Validation states */
+.form-control.is-valid {
+  border-color: var(--dumpa-success);
+}
+
+.form-control.is-invalid {
+  border-color: var(--dumpa-danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.feedback-error {
+  font-size: 0.8125rem;
+  color: var(--dumpa-danger);
+}

@@ -1,1 +1,101 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 07: Navigation & Top Header Bars
+   File: global7.css
+   ========================================================================== */
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--dumpa-backdrop-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--dumpa-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--dumpa-z-sticky);
+  transition: all var(--dumpa-transition-base);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--dumpa-space-3);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--dumpa-text);
+  letter-spacing: -0.02em;
+}
+
+.brand-logo-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--dumpa-radius-sm);
+  background: var(--dumpa-gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--dumpa-space-4);
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--dumpa-text-muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--dumpa-radius-sm);
+  transition: color var(--dumpa-transition-fast), background-color var(--dumpa-transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--dumpa-text);
+  background-color: var(--dumpa-surface-hover);
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color: rgba(99, 102, 241, 0.15);
+  color: var(--dumpa-primary);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--dumpa-space-3);
+}
+
+.navbar-search {
+  max-width: 240px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--dumpa-space-2);
+  font-size: 0.875rem;
+  color: var(--dumpa-text-dim);
+}
+
+.breadcrumbs a {
+  color: var(--dumpa-text-muted);
+  transition: color var(--dumpa-transition-fast);
+}
+
+.breadcrumbs a:hover {
+  color: var(--dumpa-text);
+}
+
+.breadcrumbs-separator {
+  color: var(--dumpa-border-light);
+}

@@ -1,1 +1,106 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 12: Tabs & Segmented Controls
+   File: global12.css
+   ========================================================================== */
 
+/* Tabs Navigation */
+.tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--dumpa-space-2);
+  border-bottom: 1px solid var(--dumpa-border);
+  margin-bottom: var(--dumpa-space-5);
+  list-style: none;
+}
+
+.tab-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dumpa-space-2);
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--dumpa-text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: all var(--dumpa-transition-fast);
+}
+
+.tab-link:hover {
+  color: var(--dumpa-text);
+}
+
+.tab-link.active {
+  color: var(--dumpa-primary);
+  border-bottom-color: var(--dumpa-primary);
+  font-weight: 600;
+}
+
+/* Segmented Control (Pill Switcher) */
+.segmented-control {
+  display: inline-flex;
+  padding: 0.25rem;
+  background-color: var(--dumpa-surface);
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-lg);
+  gap: 0.25rem;
+}
+
+.segment-item {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--dumpa-radius-md);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--dumpa-text-muted);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all var(--dumpa-transition-fast);
+}
+
+.segment-item:hover {
+  color: var(--dumpa-text);
+}
+
+.segment-item.active {
+  background-color: var(--dumpa-surface-elevated);
+  color: #ffffff;
+  box-shadow: var(--dumpa-shadow-sm);
+  font-weight: 600;
+}
+
+/* Accordions */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dumpa-space-3);
+}
+
+.accordion-item {
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-md);
+  background-color: var(--dumpa-surface-card);
+  overflow: hidden;
+}
+
+.accordion-summary {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: var(--dumpa-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-content {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--dumpa-text-muted);
+  font-size: 0.9375rem;
+}

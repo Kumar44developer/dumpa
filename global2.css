@@ -1,1 +1,143 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 02: Typography & Text Utilities
+   File: global2.css
+   ========================================================================== */
 
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dumpa-text);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--dumpa-space-3);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.625rem; }
+  h3 { font-size: 1.35rem; }
+}
+
+/* Paragraphs & Lead Text */
+p {
+  color: var(--dumpa-text-muted);
+  margin-bottom: var(--dumpa-space-4);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--dumpa-text);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Text Sizing Scale */
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+
+/* Font Weights */
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Text Colors */
+.text-primary { color: var(--dumpa-primary); }
+.text-secondary { color: var(--dumpa-secondary); }
+.text-accent { color: var(--dumpa-accent); }
+.text-muted { color: var(--dumpa-text-muted); }
+.text-dim { color: var(--dumpa-text-dim); }
+.text-white { color: #ffffff; }
+.text-success { color: var(--dumpa-success); }
+.text-warning { color: var(--dumpa-warning); }
+.text-danger { color: var(--dumpa-danger); }
+
+/* Text Gradient Effect */
+.text-gradient {
+  background: var(--dumpa-gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Code & Preformatted Text */
+code, kbd, samp, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85em;
+}
+
+code {
+  background-color: var(--dumpa-surface-elevated);
+  color: #f472b6;
+  padding: 0.15em 0.4em;
+  border-radius: var(--dumpa-radius-xs);
+  border: 1px solid var(--dumpa-border);
+}
+
+pre {
+  background-color: var(--dumpa-surface);
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-md);
+  padding: var(--dumpa-space-4);
+  overflow-x: auto;
+  color: var(--dumpa-text);
+  line-height: 1.5;
+}
+
+/* Text Truncation & Clamps */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

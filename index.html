@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dumpa UI — Modular Dark Glassmorphism CSS Design System</title>
+  <meta name="description" content="A modern, 16-module pure CSS design system featuring dark glassmorphism, responsive foundations, and micro-interactions.">
+  <link rel="stylesheet" href="dumpa.css">
+  <style>
+    .demo-app {
+      display: flex;
+      min-height: 100vh;
+    }
+    .demo-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .demo-content {
+      padding: var(--dumpa-space-8) var(--dumpa-space-6);
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .demo-section {
+      margin-bottom: var(--dumpa-space-12);
+    }
+    .demo-section-header {
+      margin-bottom: var(--dumpa-space-6);
+      border-bottom: 1px solid var(--dumpa-border);
+      padding-bottom: var(--dumpa-space-3);
+    }
+    @media (max-width: 900px) {
+      .demo-content {
+        padding: var(--dumpa-space-4);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-app">
+    <!-- Sidebar Navigation (Module 08) -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="navbar-brand">
+          <div class="brand-logo-icon">D</div>
+          <span>Dumpa<span class="text-gradient">.ui</span></span>
+        </div>
+      </div>
+
+      <div class="sidebar-section-title">Navigation</div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#overview" class="sidebar-link active">
+            <span class="sidebar-link-content">
+              <svg class="sidebar-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+              <span class="sidebar-link-text">Overview</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#buttons" class="sidebar-link">
+            <span class="sidebar-link-content">
+              <svg class="sidebar-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+              </svg>
+              <span class="sidebar-link-text">Buttons</span>
+            </span>
+            <span class="badge badge-primary sidebar-badge">16</span>
+          </a>
+        </li>
+        <li>
+          <a href="#inputs" class="sidebar-link">
+            <span class="sidebar-link-content">
+              <svg class="sidebar-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+              </svg>
+              <span class="sidebar-link-text">Forms</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#tables" class="sidebar-link">
+            <span class="sidebar-link-content">
+              <svg class="sidebar-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+              </svg>
+              <span class="sidebar-link-text">Data Tables</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-section-title">Design Elements</div>
+      <ul class="sidebar-menu">
+        <li>
+          <a href="#cards" class="sidebar-link">
+            <span class="sidebar-link-content">
+              <svg class="sidebar-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+              <span class="sidebar-link-text">Cards & Glows</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#alerts" class="sidebar-link">
+            <span class="sidebar-link-content">
+              <svg class="sidebar-link-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span class="sidebar-link-text">Alerts & Badges</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div class="avatar avatar-sm">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar">
+          <span class="avatar-status status-online"></span>
+        </div>
+        <div class="sidebar-footer-info">
+          <div style="font-weight: 600; font-size: 0.875rem;">Kumar Swamy</div>
+          <div style="font-size: 0.75rem; color: var(--dumpa-text-dim);">Core Developer</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="demo-main">
+      <!-- Top Navbar (Module 07) -->
+      <header class="navbar">
+        <div class="breadcrumbs">
+          <a href="#">Design System</a>
+          <span class="breadcrumbs-separator">/</span>
+          <span>Component Showcase</span>
+        </div>
+
+        <div class="navbar-actions">
+          <div class="input-with-icon navbar-search">
+            <span class="input-icon">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </span>
+            <input type="text" class="form-control" placeholder="Search modules..." style="padding-top: 0.4rem; padding-bottom: 0.4rem;">
+          </div>
+          <button class="btn btn-outline btn-sm" data-tooltip="View Documentation">Docs</button>
+          <a href="https://github.com/Kumar44developer/dumpa" target="_blank" class="btn btn-primary btn-sm">GitHub</a>
+        </div>
+      </header>
+
+      <!-- Main Showcase Body -->
+      <main class="demo-content">
+        <!-- Hero Section -->
+        <section id="overview" class="demo-section">
+          <div class="card glass-accent animate-fade-in" style="padding: var(--dumpa-space-8); margin-bottom: var(--dumpa-space-8);">
+            <div class="badge badge-pill badge-primary" style="margin-bottom: var(--dumpa-space-3);">v1.0.0 Architecture</div>
+            <h1 style="margin-bottom: var(--dumpa-space-3);">Dumpa <span class="text-gradient">CSS Design System</span></h1>
+            <p class="lead" style="max-width: 760px; margin-bottom: var(--dumpa-space-6);">
+              An enterprise-grade, 16-module CSS framework built for modern web applications. Featuring dark obsidian surfaces, glassmorphic blur layers, responsive grids, and fluent micro-interactions with zero JavaScript runtime dependencies.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#cards" class="btn btn-primary btn-lg">Explore Components</a>
+              <a href="#buttons" class="btn btn-secondary btn-lg">Component API</a>
+            </div>
+          </div>
+
+          <!-- Stat Cards Row (Module 06) -->
+          <div class="grid-4" style="margin-bottom: var(--dumpa-space-8);">
+            <div class="stat-card hover-lift">
+              <div class="stat-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+              </div>
+              <div class="stat-value">16</div>
+              <div class="stat-label">Modular Stylesheets</div>
+              <div class="stat-trend trend-up">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                100% Native CSS
+              </div>
+            </div>
+
+            <div class="stat-card hover-lift">
+              <div class="stat-icon" style="color: var(--dumpa-secondary);">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div class="stat-value">0 KB</div>
+              <div class="stat-label">JS Runtime Overhead</div>
+              <div class="stat-trend trend-up">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                Zero-Dependency
+              </div>
+            </div>
+
+            <div class="stat-card hover-lift">
+              <div class="stat-icon" style="color: var(--dumpa-success);">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div class="stat-value">60+</div>
+              <div class="stat-label">UI Components</div>
+              <div class="stat-trend trend-up">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                Tested & Cross-Browser
+              </div>
+            </div>
+
+            <div class="stat-card hover-lift">
+              <div class="stat-icon" style="color: var(--dumpa-accent);">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="stat-value">100%</div>
+              <div class="stat-label">Mobile Responsive</div>
+              <div class="stat-trend trend-up">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                Fluid Viewports
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Buttons Showcase (Module 04) -->
+        <section id="buttons" class="demo-section">
+          <div class="demo-section-header">
+            <h2>Buttons & Action Controls</h2>
+            <p>Vibrant gradients, elevation shadows, state styles, and size tokens.</p>
+          </div>
+          <div class="card" style="margin-bottom: var(--dumpa-space-4);">
+            <div class="flex flex-wrap gap-3 items-center" style="margin-bottom: var(--dumpa-space-4);">
+              <button class="btn btn-primary">Primary Gradient</button>
+              <button class="btn btn-secondary">Secondary Dark</button>
+              <button class="btn btn-outline">Outline Glass</button>
+              <button class="btn btn-outline-primary">Outline Brand</button>
+              <button class="btn btn-ghost">Ghost</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-danger">Danger</button>
+              <button class="btn btn-primary btn-loading">Loading</button>
+            </div>
+            <div class="flex flex-wrap gap-3 items-center">
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary btn-md">Medium</button>
+              <button class="btn btn-primary btn-lg">Large Action</button>
+              <div class="btn-group">
+                <button class="btn btn-secondary">Left</button>
+                <button class="btn btn-secondary">Middle</button>
+                <button class="btn btn-secondary">Right</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Form Controls Showcase (Module 05) -->
+        <section id="inputs" class="demo-section">
+          <div class="demo-section-header">
+            <h2>Inputs & Form Controls</h2>
+            <p>Glassmorphic form fields with crisp focus glow rings, icons, toggles, and selects.</p>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="e.g. Kumar Swamy" value="Kumar Swamy">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <div class="input-with-icon">
+                  <span class="input-icon">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
+                    </svg>
+                  </span>
+                  <input type="email" class="form-control" placeholder="developer@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Framework Target</label>
+                <select class="form-control form-select">
+                  <option>Vanilla HTML/CSS</option>
+                  <option>React / Next.js</option>
+                  <option>Vue.js / Nuxt</option>
+                  <option>SvelteKit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="form-group">
+                <label class="form-label">Project Description</label>
+                <textarea class="form-control" placeholder="Describe your project scope..."></textarea>
+              </div>
+              <div style="margin-top: var(--dumpa-space-4); display: flex; flex-direction: column; gap: var(--dumpa-space-3);">
+                <label class="form-switch">
+                  <input type="checkbox" checked>
+                  <span class="switch-slider"></span>
+                  <span style="font-size: 0.9375rem; color: var(--dumpa-text);">Enable Dark Glassmorphism</span>
+                </label>
+                <label class="form-switch">
+                  <input type="checkbox">
+                  <span class="switch-slider"></span>
+                  <span style="font-size: 0.9375rem; color: var(--dumpa-text);">Hardware Acceleration Glows</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Data Tables Showcase (Module 10) -->
+        <section id="tables" class="demo-section">
+          <div class="demo-section-header">
+            <h2>Data Tables & Modules</h2>
+            <p>Modern data display with sticky headers, subtle row hover, and status tags.</p>
+          </div>
+          <div class="table-container">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Module</th>
+                  <th>Filename</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Core Tokens</strong></td>
+                  <td><code>global1.css</code></td>
+                  <td>Foundations</td>
+                  <td><span class="badge badge-success">Production Ready</span></td>
+                  <td><button class="btn btn-outline btn-sm">Inspect</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Typography</strong></td>
+                  <td><code>global2.css</code></td>
+                  <td>Scale & Headings</td>
+                  <td><span class="badge badge-success">Production Ready</span></td>
+                  <td><button class="btn btn-outline btn-sm">Inspect</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Surfaces & Glass</strong></td>
+                  <td><code>global3.css</code></td>
+                  <td>Glassmorphism</td>
+                  <td><span class="badge badge-primary">Active</span></td>
+                  <td><button class="btn btn-outline btn-sm">Inspect</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Action Controls</strong></td>
+                  <td><code>global4.css</code></td>
+                  <td>Interactive</td>
+                  <td><span class="badge badge-success">Production Ready</span></td>
+                  <td><button class="btn btn-outline btn-sm">Inspect</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Alerts & Toasts</strong></td>
+                  <td><code>Global14.css</code></td>
+                  <td>Feedback</td>
+                  <td><span class="badge badge-warning">Updated</span></td>
+                  <td><button class="btn btn-outline btn-sm">Inspect</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Alerts & Banners (Module 14) -->
+        <section id="alerts" class="demo-section">
+          <div class="demo-section-header">
+            <h2>Alerts, Banners & Chips</h2>
+            <p>High-contrast feedback notifications and dismissible tags.</p>
+          </div>
+          <div class="alert alert-success">
+            <div class="alert-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div class="alert-content">
+              <div class="alert-title">System Loaded Successfully</div>
+              <div class="alert-message">All 16 stylesheets are linked and ready for deployment without external dependencies.</div>
+            </div>
+          </div>
+
+          <div class="alert alert-primary">
+            <div class="alert-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="alert-content">
+              <div class="alert-title">Single Bundle Available</div>
+              <div class="alert-message">Import <code>dumpa.css</code> to load all 16 modules in an optimized cascade hierarchy.</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 items-center" style="margin-top: var(--dumpa-space-4);">
+            <span class="chip">CSS3 Vanilla <span class="chip-close">&times;</span></span>
+            <span class="chip">Zero-Config <span class="chip-close">&times;</span></span>
+            <span class="chip">Glassmorphic <span class="chip-close">&times;</span></span>
+            <span class="chip">Responsive <span class="chip-close">&times;</span></span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

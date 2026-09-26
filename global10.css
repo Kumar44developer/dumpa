@@ -1,1 +1,95 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 10: Data Tables & List Views
+   File: global10.css
+   ========================================================================== */
 
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-lg);
+  background-color: var(--dumpa-surface-card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.table th,
+.table td {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--dumpa-border);
+}
+
+.table th {
+  background-color: var(--dumpa-surface);
+  color: var(--dumpa-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  transition: background-color var(--dumpa-transition-fast);
+}
+
+.table tbody tr:hover {
+  background-color: var(--dumpa-surface-hover);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+/* List Groups & Activity Feeds */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-lg);
+  background-color: var(--dumpa-surface-card);
+  overflow: hidden;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--dumpa-border);
+  transition: background-color var(--dumpa-transition-fast);
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: var(--dumpa-surface-hover);
+}
+
+.list-item-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.list-item-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--dumpa-text);
+}
+
+.list-item-subtitle {
+  font-size: 0.8125rem;
+  color: var(--dumpa-text-dim);
+}

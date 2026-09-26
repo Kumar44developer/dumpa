@@ -1,1 +1,74 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 03: Surfaces, Glassmorphism & Glows
+   File: global3.css
+   ========================================================================== */
 
+/* Surface Background Modifiers */
+.bg-base { background-color: var(--dumpa-bg); }
+.bg-surface { background-color: var(--dumpa-surface); }
+.bg-surface-card { background-color: var(--dumpa-surface-card); }
+.bg-surface-elevated { background-color: var(--dumpa-surface-elevated); }
+
+/* Frosted Glassmorphism Panels */
+.glass {
+  background: var(--dumpa-surface-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--dumpa-border);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--dumpa-border);
+}
+
+.glass-accent {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+/* Borders & Glow Effects */
+.border-subtle {
+  border: 1px solid var(--dumpa-border);
+}
+
+.border-glow {
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 20px -3px rgba(99, 102, 241, 0.25);
+}
+
+.border-gradient {
+  position: relative;
+  background: var(--dumpa-surface-card);
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: var(--dumpa-gradient-brand);
+}
+
+/* Elevation Shadow Classes */
+.shadow-sm { box-shadow: var(--dumpa-shadow-sm); }
+.shadow-md { box-shadow: var(--dumpa-shadow-md); }
+.shadow-lg { box-shadow: var(--dumpa-shadow-lg); }
+.shadow-xl { box-shadow: var(--dumpa-shadow-xl); }
+.shadow-glow { box-shadow: var(--dumpa-shadow-glow); }
+.shadow-glow-cyan { box-shadow: var(--dumpa-shadow-glow-accent); }
+
+/* Rounded Utility Classes */
+.rounded-sm { border-radius: var(--dumpa-radius-sm); }
+.rounded-md { border-radius: var(--dumpa-radius-md); }
+.rounded-lg { border-radius: var(--dumpa-radius-lg); }
+.rounded-xl { border-radius: var(--dumpa-radius-xl); }
+.rounded-full { border-radius: var(--dumpa-radius-full); }

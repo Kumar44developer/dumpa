@@ -1,1 +1,111 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 06: Cards, Panels & Metric Widgets
+   File: global6.css
+   ========================================================================== */
 
+.card {
+  background-color: var(--dumpa-surface-card);
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-lg);
+  padding: var(--dumpa-space-6);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--dumpa-transition-base), box-shadow var(--dumpa-transition-base), border-color var(--dumpa-transition-base);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--dumpa-space-4);
+  padding-bottom: var(--dumpa-space-3);
+  border-bottom: 1px solid var(--dumpa-border);
+}
+
+.card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dumpa-text);
+  margin-bottom: 0;
+}
+
+.card-subtitle {
+  font-size: 0.8125rem;
+  color: var(--dumpa-text-dim);
+}
+
+.card-body {
+  position: relative;
+}
+
+.card-footer {
+  margin-top: var(--dumpa-space-4);
+  padding-top: var(--dumpa-space-3);
+  border-top: 1px solid var(--dumpa-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Interactive Card with Lift on Hover */
+.card-interactive {
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.5), 0 0 16px -2px rgba(99, 102, 241, 0.25);
+}
+
+/* Stat & Metric Cards */
+.stat-card {
+  background: var(--dumpa-surface-card);
+  border: 1px solid var(--dumpa-border);
+  border-radius: var(--dumpa-radius-lg);
+  padding: var(--dumpa-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--dumpa-space-2);
+}
+
+.stat-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--dumpa-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dumpa-surface-elevated);
+  color: var(--dumpa-primary);
+  margin-bottom: var(--dumpa-space-2);
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--dumpa-text);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--dumpa-text-muted);
+  font-weight: 500;
+}
+
+.stat-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.stat-trend.trend-up {
+  color: var(--dumpa-success);
+}
+
+.stat-trend.trend-down {
+  color: var(--dumpa-danger);
+}

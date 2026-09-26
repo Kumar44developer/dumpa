@@ -1,1 +1,90 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 16: Animations, Keyframes & Micro-interactions
+   File: global16.css
+   ========================================================================== */
 
+/* Keyframe Animations */
+@keyframes dumpaFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dumpaSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dumpaPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px -3px rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px 2px rgba(168, 85, 247, 0.6);
+  }
+}
+
+@keyframes dumpaShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fade-in {
+  animation: dumpaFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: dumpaSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-glow {
+  animation: dumpaPulseGlow 3s infinite ease-in-out;
+}
+
+/* Skeleton Loading State */
+.skeleton {
+  background: linear-gradient(90deg, var(--dumpa-surface-card) 25%, var(--dumpa-surface-elevated) 50%, var(--dumpa-surface-card) 75%);
+  background-size: 200% 100%;
+  animation: dumpaShimmer 1.8s infinite;
+  border-radius: var(--dumpa-radius-sm);
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.skeleton-text {
+  height: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-circle {
+  border-radius: 50%;
+}
+
+/* Micro-Interactions */
+.hover-lift {
+  transition: transform var(--dumpa-transition-fast), box-shadow var(--dumpa-transition-fast);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-glow:hover {
+  box-shadow: var(--dumpa-shadow-glow);
+}

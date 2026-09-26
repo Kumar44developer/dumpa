@@ -1,1 +1,130 @@
+/* ==========================================================================
+   Dumpa CSS Design System — Module 01: Core Foundations & Design Tokens
+   File: global1.css
+   ========================================================================== */
 
+:root {
+  /* Color Palette - Surfaces & Backgrounds */
+  --dumpa-bg: #090a10;
+  --dumpa-surface: #11121c;
+  --dumpa-surface-card: #181926;
+  --dumpa-surface-elevated: #202234;
+  --dumpa-surface-hover: #272a40;
+  --dumpa-surface-glass: rgba(24, 25, 38, 0.72);
+  --dumpa-backdrop-glass: rgba(9, 10, 16, 0.85);
+
+  /* Color Palette - Brand & Accents */
+  --dumpa-primary: #6366f1;
+  --dumpa-primary-hover: #4f46e5;
+  --dumpa-secondary: #a855f7;
+  --dumpa-secondary-hover: #9333ea;
+  --dumpa-accent: #06b6d4;
+  --dumpa-accent-hover: #0891b2;
+  --dumpa-gradient-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  --dumpa-gradient-subtle: linear-gradient(180deg, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.04) 100%);
+
+  /* Functional / Semantic Colors */
+  --dumpa-success: #10b981;
+  --dumpa-success-surface: rgba(16, 185, 129, 0.12);
+  --dumpa-warning: #f59e0b;
+  --dumpa-warning-surface: rgba(245, 158, 11, 0.12);
+  --dumpa-danger: #ef4444;
+  --dumpa-danger-surface: rgba(239, 68, 68, 0.12);
+  --dumpa-info: #3b82f6;
+  --dumpa-info-surface: rgba(59, 130, 246, 0.12);
+
+  /* Typography Colors */
+  --dumpa-text: #f8fafc;
+  --dumpa-text-muted: #94a3b8;
+  --dumpa-text-dim: #64748b;
+  --dumpa-text-inverse: #090a10;
+
+  /* Borders & Dividers */
+  --dumpa-border: rgba(255, 255, 255, 0.09);
+  --dumpa-border-light: rgba(255, 255, 255, 0.16);
+  --dumpa-border-focus: rgba(99, 102, 241, 0.6);
+
+  /* Shadows & Glows */
+  --dumpa-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --dumpa-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --dumpa-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.45), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --dumpa-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --dumpa-shadow-glow: 0 0 25px -4px rgba(99, 102, 241, 0.35);
+  --dumpa-shadow-glow-accent: 0 0 25px -4px rgba(6, 182, 212, 0.35);
+
+  /* Border Radii */
+  --dumpa-radius-xs: 4px;
+  --dumpa-radius-sm: 6px;
+  --dumpa-radius-md: 10px;
+  --dumpa-radius-lg: 16px;
+  --dumpa-radius-xl: 24px;
+  --dumpa-radius-full: 9999px;
+
+  /* Spacing Scale */
+  --dumpa-space-1: 0.25rem;  /* 4px */
+  --dumpa-space-2: 0.5rem;   /* 8px */
+  --dumpa-space-3: 0.75rem;  /* 12px */
+  --dumpa-space-4: 1rem;     /* 16px */
+  --dumpa-space-5: 1.25rem;  /* 20px */
+  --dumpa-space-6: 1.5rem;   /* 24px */
+  --dumpa-space-8: 2rem;     /* 32px */
+  --dumpa-space-10: 2.5rem;  /* 40px */
+  --dumpa-space-12: 3rem;    /* 48px */
+  --dumpa-space-16: 4rem;    /* 64px */
+
+  /* Transitions */
+  --dumpa-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --dumpa-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --dumpa-transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-Index Layers */
+  --dumpa-z-dropdown: 1000;
+  --dumpa-z-sticky: 1020;
+  --dumpa-z-fixed: 1030;
+  --dumpa-z-modal-backdrop: 1040;
+  --dumpa-z-modal: 1050;
+  --dumpa-z-popover: 1060;
+  --dumpa-z-tooltip: 1070;
+}
+
+/* Base Reset & Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--dumpa-bg);
+  color: var(--dumpa-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg, picture, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
