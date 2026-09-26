@@ -1,10 +1,4 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Module 01: Core Foundations & Design Tokens
-   File: global1.css
-   ========================================================================== */
-
 :root {
-  /* Color Palette - Surfaces & Backgrounds */
   --dumpa-bg: #090a10;
   --dumpa-surface: #11121c;
   --dumpa-surface-card: #181926;
@@ -13,7 +7,6 @@
   --dumpa-surface-glass: rgba(24, 25, 38, 0.72);
   --dumpa-backdrop-glass: rgba(9, 10, 16, 0.85);
 
-  /* Color Palette - Brand & Accents */
   --dumpa-primary: #6366f1;
   --dumpa-primary-hover: #4f46e5;
   --dumpa-secondary: #a855f7;
@@ -23,7 +16,6 @@
   --dumpa-gradient-brand: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
   --dumpa-gradient-subtle: linear-gradient(180deg, rgba(99, 102, 241, 0.12) 0%, rgba(168, 85, 247, 0.04) 100%);
 
-  /* Functional / Semantic Colors */
   --dumpa-success: #10b981;
   --dumpa-success-surface: rgba(16, 185, 129, 0.12);
   --dumpa-warning: #f59e0b;
@@ -33,18 +25,15 @@
   --dumpa-info: #3b82f6;
   --dumpa-info-surface: rgba(59, 130, 246, 0.12);
 
-  /* Typography Colors */
   --dumpa-text: #f8fafc;
   --dumpa-text-muted: #94a3b8;
   --dumpa-text-dim: #64748b;
   --dumpa-text-inverse: #090a10;
 
-  /* Borders & Dividers */
   --dumpa-border: rgba(255, 255, 255, 0.09);
   --dumpa-border-light: rgba(255, 255, 255, 0.16);
   --dumpa-border-focus: rgba(99, 102, 241, 0.6);
 
-  /* Shadows & Glows */
   --dumpa-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
   --dumpa-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
   --dumpa-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.45), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
@@ -52,7 +41,6 @@
   --dumpa-shadow-glow: 0 0 25px -4px rgba(99, 102, 241, 0.35);
   --dumpa-shadow-glow-accent: 0 0 25px -4px rgba(6, 182, 212, 0.35);
 
-  /* Border Radii */
   --dumpa-radius-xs: 4px;
   --dumpa-radius-sm: 6px;
   --dumpa-radius-md: 10px;
@@ -60,24 +48,21 @@
   --dumpa-radius-xl: 24px;
   --dumpa-radius-full: 9999px;
 
-  /* Spacing Scale */
-  --dumpa-space-1: 0.25rem;  /* 4px */
-  --dumpa-space-2: 0.5rem;   /* 8px */
-  --dumpa-space-3: 0.75rem;  /* 12px */
-  --dumpa-space-4: 1rem;     /* 16px */
-  --dumpa-space-5: 1.25rem;  /* 20px */
-  --dumpa-space-6: 1.5rem;   /* 24px */
-  --dumpa-space-8: 2rem;     /* 32px */
-  --dumpa-space-10: 2.5rem;  /* 40px */
-  --dumpa-space-12: 3rem;    /* 48px */
-  --dumpa-space-16: 4rem;    /* 64px */
+  --dumpa-space-1: 0.25rem;
+  --dumpa-space-2: 0.5rem;
+  --dumpa-space-3: 0.75rem;
+  --dumpa-space-4: 1rem;
+  --dumpa-space-5: 1.25rem;
+  --dumpa-space-6: 1.5rem;
+  --dumpa-space-8: 2rem;
+  --dumpa-space-10: 2.5rem;
+  --dumpa-space-12: 3rem;
+  --dumpa-space-16: 4rem;
 
-  /* Transitions */
   --dumpa-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --dumpa-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --dumpa-transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Z-Index Layers */
   --dumpa-z-dropdown: 1000;
   --dumpa-z-sticky: 1020;
   --dumpa-z-fixed: 1030;
@@ -87,7 +72,6 @@
   --dumpa-z-tooltip: 1070;
 }
 
-/* Base Reset & Box Sizing */
 *,
 *::before,
 *::after {

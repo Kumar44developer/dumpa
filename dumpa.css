@@ -1,21 +1,16 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Master Bundle
-   Imports all 16 modular stylesheets in their optimal cascade sequence.
-   ========================================================================== */
-
-@import url("global1.css");   /* 01. Core Foundations, Reset & Tokens */
-@import url("global2.css");   /* 02. Typography & Headings */
-@import url("global3.css");   /* 03. Surfaces, Glassmorphism & Glows */
-@import url("global4.css");   /* 04. Buttons & Action Controls */
-@import url("global5.css");   /* 05. Inputs & Form Controls */
-@import url("global6.css");   /* 06. Cards, Panels & Metric Widgets */
-@import url("global7.css");   /* 07. Navigation & Top Header Bars */
-@import url("global8.css");   /* 08. Sidebar & Drawer Navigation */
-@import url("global9.css");   /* 09. Avatars, Badges & Chips */
-@import url("global10.css");  /* 10. Data Tables & List Views */
-@import url("global11.css");  /* 11. Modals, Dialogs & Backdrops */
-@import url("global12.css");  /* 12. Tabs & Segmented Controls */
-@import url("global13.css");  /* 13. Tooltips, Dropdowns & Popovers */
-@import url("Global14.css");  /* 14. Alerts, Banners & Toast Notifications */
-@import url("global15.css");  /* 15. Grid, Flexbox & Layout Engine */
-@import url("global16.css");  /* 16. Animations, Keyframes & Micro-interactions */
+@import url("global1.css");
+@import url("global2.css");
+@import url("global3.css");
+@import url("global4.css");
+@import url("global5.css");
+@import url("global6.css");
+@import url("global7.css");
+@import url("global8.css");
+@import url("global9.css");
+@import url("global10.css");
+@import url("global11.css");
+@import url("global12.css");
+@import url("global13.css");
+@import url("Global14.css");
+@import url("global15.css");
+@import url("global16.css");

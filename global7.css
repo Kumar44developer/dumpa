@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Module 07: Navigation & Top Header Bars
-   File: global7.css
-   ========================================================================== */
-
 .navbar {
   display: flex;
   align-items: center;
@@ -78,7 +73,6 @@
   max-width: 240px;
 }
 
-/* Breadcrumbs */
 .breadcrumbs {
   display: flex;
   align-items: center;

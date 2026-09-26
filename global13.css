@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Module 13: Tooltips, Dropdowns & Popovers
-   File: global13.css
-   ========================================================================== */
-
-/* CSS-Only Tooltips */
 [data-tooltip] {
   position: relative;
   cursor: pointer;
@@ -51,7 +45,6 @@
   transform: translateX(-50%) translateY(0);
 }
 
-/* Dropdown Menus */
 .dropdown {
   position: relative;
   display: inline-block;

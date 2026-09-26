@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Module 12: Tabs & Segmented Controls
-   File: global12.css
-   ========================================================================== */
-
-/* Tabs Navigation */
 .tabs-nav {
   display: flex;
   align-items: center;
@@ -37,7 +31,6 @@
   font-weight: 600;
 }
 
-/* Segmented Control (Pill Switcher) */
 .segmented-control {
   display: inline-flex;
   padding: 0.25rem;
@@ -70,7 +63,6 @@
   font-weight: 600;
 }
 
-/* Accordions */
 .accordion {
   display: flex;
   flex-direction: column;

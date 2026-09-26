@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Module 02: Typography & Text Utilities
-   File: global2.css
-   ========================================================================== */
-
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: var(--dumpa-text);
   font-weight: 700;
@@ -25,7 +19,6 @@ h6 { font-size: 1rem; }
   h3 { font-size: 1.35rem; }
 }
 
-/* Paragraphs & Lead Text */
 p {
   color: var(--dumpa-text-muted);
   margin-bottom: var(--dumpa-space-4);
@@ -40,7 +33,6 @@ p {
   line-height: 1.7;
 }
 
-/* Text Sizing Scale */
 .text-xs { font-size: 0.75rem; line-height: 1rem; }
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
 .text-base { font-size: 1rem; line-height: 1.5rem; }
@@ -50,19 +42,16 @@ p {
 .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
 .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
 
-/* Font Weights */
 .font-normal { font-weight: 400; }
 .font-medium { font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-bold { font-weight: 700; }
 .font-extrabold { font-weight: 800; }
 
-/* Text Alignment */
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
-/* Text Colors */
 .text-primary { color: var(--dumpa-primary); }
 .text-secondary { color: var(--dumpa-secondary); }
 .text-accent { color: var(--dumpa-accent); }
@@ -73,7 +62,6 @@ p {
 .text-warning { color: var(--dumpa-warning); }
 .text-danger { color: var(--dumpa-danger); }
 
-/* Text Gradient Effect */
 .text-gradient {
   background: var(--dumpa-gradient-brand);
   -webkit-background-clip: text;
@@ -90,7 +78,6 @@ p {
   display: inline-block;
 }
 
-/* Code & Preformatted Text */
 code, kbd, samp, pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.85em;
@@ -114,7 +101,6 @@ pre {
   line-height: 1.5;
 }
 
-/* Text Truncation & Clamps */
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Dumpa CSS Design System — Module 15: Grid, Flexbox & Layout Engine
-   File: global15.css
-   ========================================================================== */
-
-/* Container */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -17,7 +11,6 @@
 .container-lg { max-width: 1400px; }
 .container-fluid { max-width: 100%; }
 
-/* 12-Column Responsive Grid */
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -37,7 +30,6 @@
 .col-11 { grid-column: span 11 / span 11; }
 .col-12 { grid-column: span 12 / span 12; }
 
-/* Grid Auto-Fit & Presets */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -72,7 +64,6 @@
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
 
-/* Flexbox Utilities */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .flex-row { flex-direction: row; }
